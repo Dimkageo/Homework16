@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Note</title>
+</head>
+<body>
+
+<h2>Create Note</h2>
+
+<form method="post" th:action="@{/note/save}">
+    <label>Title: </label>
+    <input type="text" name="title" th:field="${note.title}" required>
+    <br>
+    <label>Content: </label>
+    <textarea name="content" th:field="${note.content}" required></textarea>
+    <br>
+    <button type="submit">Save Note</button>
+</form>
+
+</body>
+</html>
